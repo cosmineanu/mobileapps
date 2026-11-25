@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mismatched: Images & Categories - Official App Page</title>
+  <meta name="description" content="Mismatched: Images & Categories is an addictive visual puzzle game for iPhone and iPad. Swap pictures to match categories and solve hundreds of clever brain teasers in 6 languages.">
+  <link rel="icon" type="image/png" href="app-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #178e22;
+      --primary-hover: #12751b;
+      --accent: #ffc400;
+      --accent-glow: #ffd54f;
+      --bg-dark: #1e130c;
+      --bg-card: #2c1d13;
+      --bg-card-glass: rgba(44, 29, 19, 0.85);
+      --text-main: #fffdf7;
+      --text-muted: #d5c8be;
+      --border-color: rgba(255, 196, 0, 0.25);
+      --border-subtle: rgba(255, 255, 255, 0.12);
+      --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Nunito', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg-dark);
+      background-image:
+        radial-gradient(circle at 50% 10%, rgba(255, 196, 0, 0.08), transparent 40%),
+        radial-gradient(circle at 80% 50%, rgba(23, 142, 34, 0.06), transparent 50%),
+        radial-gradient(circle at 20% 80%, rgba(255, 196, 0, 0.05), transparent 40%);
+      color: var(--text-main);
+      line-height: 1.6;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: 24px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .brand-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      border: 2px solid var(--accent);
+    }
+
+    .brand-title {
+      font-family: 'Fredoka', cursive;
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: var(--text-main);
+    }
+
+    .hero {
+      max-width: 1200px;
+      margin: 40px auto 60px;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 32px;
+      }
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      background: rgba(255, 196, 0, 0.15);
+      border: 1px solid var(--accent);
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-family: 'Fredoka', cursive;
+      font-size: 3.2rem;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      color: #fff;
+      text-shadow: 0 4px 16px rgba(0,0,0,0.4);
+    }
+
+    .hero h1 span {
+      color: var(--accent);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      max-width: 580px;
+    }
+
+    @media (max-width: 900px) {
+      .hero p {
+        margin: 0 auto 32px;
+      }
+    }
+
+    .cta-group {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 900px) {
+      .cta-group {
+        justify-content: center;
+      }
+    }
+
+    .app-store-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: #000;
+      border: 1.5px solid rgba(255, 255, 255, 0.4);
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 14px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: all 0.2s ease;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+    }
+
+    .app-store-btn:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+      box-shadow: 0 12px 30px rgba(255, 196, 0, 0.25);
+    }
+
+    .app-store-btn svg {
+      width: 28px;
+      height: 28px;
+      fill: #fff;
+    }
+
+    .btn-text {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
+
+    .btn-text .subtext {
+      font-size: 0.72rem;
+      font-weight: 400;
+      opacity: 0.8;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .btn-text .maintext {
+      font-size: 1.15rem;
+      font-weight: 700;
+      line-height: 1.1;
+    }
+
+    .hero-media {
+      position: relative;
+    }
+
+    .hero-img-card {
+      width: 100%;
+      border-radius: 20px;
+      border: 3px solid var(--border-color);
+      box-shadow: var(--shadow-lg);
+      transition: transform 0.3s ease;
+      display: block;
+    }
+
+    .hero-img-card:hover {
+      transform: scale(1.02);
+    }
+
+    /* Features Grid */
+    .section-title {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .section-title h2 {
+      font-family: 'Fredoka', cursive;
+      font-size: 2.4rem;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+
+    .section-title p {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .features {
+      max-width: 1200px;
+      margin: 80px auto;
+      padding: 0 24px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 28px;
+    }
+
+    .feature-card {
+      background: var(--bg-card-glass);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border-subtle);
+      border-radius: 20px;
+      padding: 32px 24px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent), var(--primary));
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--border-color);
+      box-shadow: 0 16px 36px rgba(0,0,0,0.4);
+    }
+
+    .feature-card:hover::before {
+      opacity: 1;
+    }
+
+    .feature-icon {
+      font-size: 2.4rem;
+      margin-bottom: 16px;
+      display: inline-block;
+    }
+
+    .feature-card h3 {
+      font-family: 'Fredoka', cursive;
+      font-size: 1.35rem;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .feature-card p {
+      color: var(--text-muted);
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    /* Screenshots Gallery */
+    .gallery-section {
+      max-width: 1240px;
+      margin: 80px auto;
+      padding: 0 24px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 24px;
+    }
+
+    .gallery-item {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 2px solid var(--border-subtle);
+      background: #000;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.4);
+      transition: all 0.3s ease;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+      box-shadow: 0 14px 32px rgba(255, 196, 0, 0.2);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .gallery-caption {
+      padding: 14px 18px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--text-main);
+      background: rgba(30, 19, 12, 0.95);
+      border-top: 1px solid var(--border-subtle);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .gallery-caption span {
+      color: var(--accent);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Languages Banner */
+    .lang-banner {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 40px 32px;
+      background: linear-gradient(135deg, rgba(44, 29, 19, 0.9), rgba(23, 142, 34, 0.3));
+      border: 2px solid var(--border-color);
+      border-radius: 24px;
+      text-align: center;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .lang-banner h3 {
+      font-family: 'Fredoka', cursive;
+      font-size: 2rem;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+
+    .lang-banner p {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      margin-bottom: 24px;
+    }
+
+    .flags-row {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .flag-badge {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid var(--border-subtle);
+      padding: 8px 18px;
+      border-radius: 999px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border-subtle);
+      padding: 48px 24px 32px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 700;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .copyright {
+      font-size: 0.85rem;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <a href="#" class="brand">
+      <img src="app-icon.png" alt="Mismatched App Icon" class="brand-icon">
+      <span class="brand-title">Mismatched: Images & Categories</span>
+    </a>
+    <div class="header-action">
+      <a href="https://apps.apple.com/sa/app/mismatched-images-categories/id972429993" target="_blank" rel="noopener" class="app-store-btn" style="padding: 8px 18px; border-radius: 10px;">
+        <span class="btn-text">
+          <span class="subtext">Available on</span>
+          <span class="maintext" style="font-size: 0.95rem;">App Store</span>
+        </span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">★ New Version 3.19 Available</div>
+      <h1>Swap, Match & Solve <span>Visual Puzzles</span></h1>
+      <p>Challenge your brain with hundreds of clever photographic category puzzles. Swap picture tiles two at a time to organize columns into matching categories!</p>
+
+      <div class="cta-group">
+        <a href="https://apps.apple.com/sa/app/mismatched-images-categories/id972429993" target="_blank" rel="noopener" class="app-store-btn">
+          <svg viewBox="0 0 170 170">
+            <path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.7-3.07-7.73-7.85-12.08-14.34-7.5-11.21-13.4-23.77-17.71-37.68-4.31-13.91-6.46-27.18-6.46-39.81 0-14.82 3.8-27.42 11.41-37.8 7.61-10.38 17.38-15.7 29.31-15.96 5.8 0 12.08 1.63 18.84 4.88 6.76 3.25 11.23 4.93 13.41 5.04 1.74-.22 6.52-2 14.34-5.35 7.82-3.35 14.34-4.83 19.56-4.45 13.91 1.09 25.13 6.64 33.67 16.64-12.18 7.39-18.17 17.5-17.97 30.34.22 10.22 4.14 18.86 11.75 25.92 7.61 7.06 16.75 11.09 27.42 12.08-2.61 8.27-5.98 16.53-10.12 24.78zM119.22 31.43c0-7.17 2.61-14.02 7.83-20.55 5.22-6.53 11.74-10.5 19.56-11.91.43 1.09.65 2.18.65 3.26 0 7.18-2.72 14.24-8.16 21.19-5.44 6.96-12.07 10.88-19.88 11.75v-3.74z"/>
+          </svg>
+          <span class="btn-text">
+            <span class="subtext">Download on the</span>
+            <span class="maintext">App Store</span>
+          </span>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-media">
+      <img src="search_results_1920x1280.png" alt="Mismatched Game Overview" class="hero-img-card">
+    </div>
+  </section>
+
+  <!-- Features Grid -->
+  <section class="features">
+    <div class="section-title">
+      <h2>Why You'll Love Mismatched</h2>
+      <p>Clean design, rich photographic content, and relaxing brain-teasing gameplay with no pressure.</p>
+    </div>
+
+    <div class="grid">
+      <div class="feature-card">
+        <div class="feature-icon">🧩</div>
+        <h3>Hundreds of Visual Levels</h3>
+        <p>Explore Easy, Medium, and Hard level packs featuring dozens of varied categories from Animals and Vehicles to Cooking and Astronomy.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🧠</div>
+        <h3>Sharp Brain Training</h3>
+        <p>Strengthen your visual memory, classification skills, and deductive thinking. Simply swap any two pictures to group columns into categories.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">💡</div>
+        <h3>Smart Hints System</h3>
+        <p>Never get stuck! Use intelligent hints that highlight items belonging together, allowing you to solve even the trickiest boards.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🌍</div>
+        <h3>6 Supported Languages</h3>
+        <p>Play seamlessly in English, German, French, Spanish, Italian, or Portuguese with full native localization and vocabulary building.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">👨‍👩‍👧‍👦</div>
+        <h3>100% Family Friendly</h3>
+        <p>Rated 4+ for all ages. No timers, no stress, and no aggressive interruptions. Perfect for curious kids, adults, and seniors alike.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">✈️</div>
+        <h3>Play Anytime Offline</h3>
+        <p>No Wi-Fi or cellular connection required to play. Enjoy peaceful puzzling on planes, trains, or your daily commute.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Showcase -->
+  <section class="gallery-section">
+    <div class="section-title">
+      <h2>Game Previews & Gameplay</h2>
+      <p>Take a closer look at the stunning wooden puzzle board, crisp photography, and celebratory level completions.</p>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="screenshot_en_level1_2868x1320.png" alt="Level 1 Gameplay - English">
+        <div class="gallery-caption">
+          Level 1: Clothes & Astronomy
+          <span>English</span>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="screenshot_de_level1_2868x1320.png" alt="Level 1 Gameplay - German">
+        <div class="gallery-caption">
+          Level 1: Kleidung & Astronomie
+          <span>Deutsch</span>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="screenshot_fr_level1_2868x1320.png" alt="Level 1 Gameplay - French">
+        <div class="gallery-caption">
+          Level 1: Vêtements & Astronomie
+          <span>Français</span>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="screenshot_es_level1_2868x1320.png" alt="Level 1 Gameplay - Spanish">
+        <div class="gallery-caption">
+          Level 1: Ropa & Astronomía
+          <span>Español</span>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="screenshot_en_level4_2868x1320.png" alt="Level 4 Gameplay - Instruments & Sports">
+        <div class="gallery-caption">
+          Level 4: Instruments & Vehicles
+          <span>Gameplay</span>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="header_banner_3840x1646.png" alt="Header Banner Preview">
+        <div class="gallery-caption">
+          Mismatched: Official Banner
+          <span>Artwork</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Language Banner -->
+  <div class="lang-banner">
+    <h3>Play in Your Native Language</h3>
+    <p>Mismatched is thoughtfully adapted with authentic translations for international puzzle enthusiasts.</p>
+    <div class="flags-row">
+      <div class="flag-badge">🇬🇧 English</div>
+      <div class="flag-badge">🇩🇪 Deutsch</div>
+      <div class="flag-badge">🇫🇷 Français</div>
+      <div class="flag-badge">🇪🇸 Español</div>
+      <div class="flag-badge">🇮🇹 Italiano</div>
+      <div class="flag-badge">🇵🇹 Português</div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="https://apps.apple.com/sa/app/mismatched-images-categories/id972429993" target="_blank" rel="noopener">App Store Listing</a>
+      <a href="privacy-policy-m-ios.html">Privacy Policy</a>
+      <a href="mailto:support@tedrasoft.com">Support & Feedback</a>
+    </div>
+    <p class="copyright">© 2026 Tedrasoft. Apple, the Apple logo, iPhone, and iPad are trademarks of Apple Inc., registered in the U.S. and other countries. App Store is a service mark of Apple Inc.</p>
+  </footer>
+
+</body>
+</html>
