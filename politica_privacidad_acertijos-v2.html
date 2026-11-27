@@ -6,116 +6,134 @@
     <title>Política de Privacidad de Acertijos</title>
     <style>
         :root {
-            --bg-color: #f8fafc;
+            --primary: #9b111e;
+            --primary-dark: #6f111a;
+            --text-main: #2b1d1f;
+            --text-muted: #5e4a4e;
+            --bg: #faf7f7;
             --card-bg: #ffffff;
-            --text-primary: #1e293b;
-            --text-secondary: #475569;
-            --accent-color: #2563eb;
-            --border-color: #e2e8f0;
-            --code-bg: #f1f5f9;
+            --border: #eedadb;
+            --gold: #d4a017;
         }
-        * {
-            box-sizing: border-box;
-        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
             line-height: 1.65;
-            color: var(--text-primary);
-            background-color: var(--bg-color);
             margin: 0;
-            padding: 2rem 1rem;
+            padding: 24px 16px;
         }
+
         .container {
             max-width: 820px;
             margin: 0 auto;
             background-color: var(--card-bg);
-            padding: 2.5rem 3rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
-            border: 1px solid var(--border-color);
+            padding: 36px 32px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border);
         }
-        header {
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 1.25rem;
-            margin-bottom: 1.75rem;
-        }
+
         h1 {
-            margin: 0 0 0.5rem 0;
-            font-size: 2rem;
-            color: #0f172a;
-            line-height: 1.25;
-        }
-        .last-updated {
-            margin: 0;
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-        }
-        h2 {
-            font-size: 1.35rem;
-            color: #0f172a;
-            margin-top: 2.25rem;
-            margin-bottom: 0.75rem;
-            padding-bottom: 0.4rem;
-            border-bottom: 1px solid var(--border-color);
-        }
-        h3 {
-            font-size: 1.1rem;
-            color: #1e293b;
-            margin-top: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-        p {
+            color: var(--primary);
+            font-size: 1.85rem;
             margin-top: 0;
-            margin-bottom: 1rem;
-            color: var(--text-primary);
+            margin-bottom: 8px;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 12px;
         }
+
+        .meta {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 24px;
+        }
+
+        .meta strong {
+            color: var(--primary-dark);
+        }
+
+        h2 {
+            color: var(--primary-dark);
+            font-size: 1.35rem;
+            margin-top: 32px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+
+        h3 {
+            color: var(--text-main);
+            font-size: 1.1rem;
+            margin-top: 20px;
+            margin-bottom: 8px;
+        }
+
+        p, li {
+            font-size: 1rem;
+            color: var(--text-main);
+        }
+
         ul {
-            margin-top: 0.25rem;
-            margin-bottom: 1.25rem;
-            padding-left: 1.5rem;
+            padding-left: 24px;
+            margin-bottom: 16px;
         }
+
         li {
-            margin-bottom: 0.6rem;
+            margin-bottom: 8px;
         }
+
         code {
-            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-            font-size: 0.9em;
-            background-color: var(--code-bg);
-            padding: 0.15rem 0.4rem;
+            background-color: #f4ebec;
+            color: var(--primary-dark);
+            padding: 2px 6px;
             border-radius: 4px;
-            color: #0f172a;
-            border: 1px solid var(--border-color);
+            font-size: 0.9em;
+            font-family: monospace;
         }
+
         a {
-            color: var(--accent-color);
-            text-decoration: none;
-        }
-        a:hover {
+            color: var(--primary);
             text-decoration: underline;
         }
+
+        a:hover {
+            color: var(--primary-dark);
+        }
+
+        .highlight-box {
+            background-color: #fff8eb;
+            border-left: 4px solid var(--gold);
+            padding: 14px 18px;
+            border-radius: 6px;
+            margin: 20px 0;
+            font-size: 0.95rem;
+        }
+
         .contact-box {
-            background-color: #f8fafc;
-            border-left: 4px solid var(--accent-color);
-            padding: 1rem 1.25rem;
-            border-radius: 0 8px 8px 0;
-            margin-top: 1rem;
+            background-color: #fcf1f2;
+            border: 1px solid var(--border);
+            padding: 16px 20px;
+            border-radius: 12px;
+            margin-top: 20px;
         }
-        .contact-box ul {
-            margin-bottom: 0;
+
+        hr {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 32px 0;
         }
-        .contact-box li {
-            margin-bottom: 0;
-        }
-        @media (max-width: 640px) {
+
+        @media (max-width: 600px) {
             body {
-                padding: 1rem 0.5rem;
+                padding: 12px 8px;
             }
             .container {
-                padding: 1.5rem 1.25rem;
-                border-radius: 8px;
+                padding: 24px 18px;
             }
             h1 {
-                font-size: 1.6rem;
+                font-size: 1.5rem;
             }
             h2 {
                 font-size: 1.2rem;
@@ -124,88 +142,124 @@
     </style>
 </head>
 <body>
-    <main class="container">
-        <header>
-            <h1>Política de Privacidad de Acertijos</h1>
-            <p class="last-updated"><strong>Última actualización:</strong> 21 de noviembre de 2026</p>
-        </header>
 
-        <section>
-            <p>La aplicación <strong>Acertijos</strong> (en adelante, la "Aplicación") es desarrollada y mantenida por <strong>Cooler</strong> (en adelante, el "Desarrollador"). Esta Política de Privacidad describe cómo se recopila, utiliza y comparte la información cuando utilizas nuestra Aplicación para dispositivos Android (<code>com.dragos.acertijos</code>).</p>
-            <p>Nos tomamos muy en serio tu privacidad y cumplimos con las políticas de Google Play y las normativas de protección de datos aplicables (como GDPR y COPPA).</p>
-        </section>
+<div class="container">
+    <h1>Política de Privacidad de Acertijos</h1>
+    <div class="meta">
+        <strong>Última actualización:</strong> 27 de noviembre de 2026<br>
+        <strong>Aplicación:</strong> Acertijos (<code>com.dragos.acertijos</code>)<br>
+        <strong>Desarrollador:</strong> Cooler
+    </div>
 
-        <section>
-            <h2>1. Información que Recopilamos</h2>
+    <p>
+        La aplicación <strong>Acertijos</strong> (en adelante, la "Aplicación") es desarrollada y distribuida por <strong>Cooler</strong> (en adelante, el "Desarrollador"). Esta Política de Privacidad describe de manera transparente qué datos se recopilan, cómo se utilizan y cómo se protegen cuando instalas y utilizas nuestra Aplicación en dispositivos Android.
+    </p>
 
-            <h3>1.1. Datos recopilados automáticamente por servicios de terceros</h3>
-            <p>La Aplicación utiliza servicios de terceros que pueden recopilar información utilizada para identificarte de acuerdo con sus propias políticas de privacidad:</p>
-            <ul>
-                <li><strong>Google AdMob y Google UMP (User Messaging Platform):</strong> Utilizamos Google AdMob para mostrar anuncios en la aplicación. AdMob puede recopilar y utilizar identificadores de publicidad de dispositivos (como el ID de publicidad de Google), dirección IP, información de red y datos de uso de anuncios para mostrar anuncios personalizados o no personalizados, así como para la medición de anuncios y prevención de fraude.</li>
-                <li><strong>Google Play Billing (Facturación de Google Play):</strong> Cuando realizas compras dentro de la aplicación (como paquetes de monedas), la transacción es procesada íntegramente por Google Play Store. El Desarrollador <strong>no</strong> almacena información financiera ni números de tarjeta de crédito/débito.</li>
-            </ul>
+    <p>
+        Nos tomamos muy en serio la privacidad y nos comprometemos a cumplir rigurosamente con las políticas para desarrolladores de Google Play, las directrices de Google AdMob y las normativas aplicables de protección de datos, incluido el Reglamento General de Protección de Datos (RGPD / GDPR de la Unión Europea).
+    </p>
 
-            <h3>1.2. Datos almacenados localmente en el dispositivo</h3>
-            <p>La Aplicación almacena cierta información de juego localmente en tu dispositivo utilizando preferencias compartidas (<code>SharedPreferences</code>):</p>
-            <ul>
-                <li>Tu progreso actual (nivel actual, niveles completados).</li>
-                <li>Tu saldo de monedas virtuales.</li>
-                <li>Preferencias de sonido (activado/desactivado).</li>
-                <li>Fecha del último salto diario de nivel.</li>
-            </ul>
-            <p>Esta información permanece en tu dispositivo y no se transmite a servidores externos del Desarrollador.</p>
-        </section>
+    <h2>1. Información que Recopilamos</h2>
 
-        <section>
-            <h2>2. Cómo Utilizamos la Información</h2>
-            <p>La información recopilada por los servicios de terceros y los datos locales se utilizan para:</p>
-            <ul>
-                <li>Operar, mantener y mejorar la Aplicación y su jugabilidad.</li>
-                <li>Gestionar tu progreso en los acertijos y recompensas de monedas.</li>
-                <li>Mostrar anuncios relevantes a través de Google AdMob y gestionar las solicitudes de consentimiento de anuncios (SDK UMP).</li>
-                <li>Procesar de forma segura las compras dentro de la aplicación a través de Google Play Billing.</li>
-            </ul>
-        </section>
+    <h3>1.1. Datos recopilados automáticamente por servicios de terceros</h3>
+    <p>La Aplicación no recopila información de identificación personal directamente, pero integra bibliotecas estándar de terceros para servicios de publicidad y pagos:</p>
+    <ul>
+        <li>
+            <strong>Google AdMob y Google UMP (User Messaging Platform):</strong><br>
+            Utilizamos Google AdMob para servir anuncios intersticiales y anuncios de vídeo con recompensa (<em>rewarded video ads</em>). Google AdMob y sus proveedores de tecnología publicitaria asociados pueden recopilar y tratar identificadores del dispositivo (como el <code>Advertising ID</code> / <code>AD_ID</code> de Google), la dirección IP, datos de red y estadísticas de interacción con los anuncios con fines de personalización publicitaria (cuando el usuario haya otorgado su consentimiento expreso), medición de eficacia y prevención contra el fraude publicitario.<br>
+            Para más información, consulta la documentación oficial de Google: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Cómo utiliza Google la información de sitios web o aplicaciones que utilizan sus servicios</a>.
+        </li>
+        <li>
+            <strong>Google Play Billing (Facturación en Google Play):</strong><br>
+            Cuando adquieres paquetes de monedas virtuales en la tienda de la Aplicación, la transacción monetaria es gestionada y procesada íntegramente por la plataforma segura de Google Play Store. El Desarrollador <strong>nunca</strong> tiene acceso ni recopila tus datos bancarios, números de tarjeta de crédito o información de facturación personal.
+        </li>
+    </ul>
 
-        <section>
-            <h2>3. Publicidad y Consentimiento (SDK UMP de Google)</h2>
-            <p>Para cumplir con las políticas de Google Play y las leyes de privacidad (como el RGPD en la Unión Europea), la Aplicación integra el SDK de la Plataforma de Mensajería de Usuario (UMP) de Google. A los usuarios ubicados en regiones aplicables se les presenta un diálogo de consentimiento al iniciar la aplicación para elegir entre anuncios personalizados o no personalizados, o gestionar sus preferencias de privacidad.</p>
-        </section>
+    <h3>1.2. Datos almacenados localmente en el dispositivo</h3>
+    <p>
+        La Aplicación guarda información técnica y de progreso de juego únicamente en la memoria local privada de tu dispositivo mediante las preferencias compartidas de Android (<code>SharedPreferences</code>):
+    </p>
+    <ul>
+        <li>Nivel actual de acertijo y registro de niveles completados.</li>
+        <li>Índice del nivel más alto desbloqueado.</li>
+        <li>Saldo de monedas virtuales acumuladas.</li>
+        <li>Ajustes de sonido y efectos de audio (activado / desactivado).</li>
+        <li>Fecha del último salto diario de nivel (para limitar el uso gratuito a una vez al día).</li>
+        <li>Identificadores de transacciones de compra verificadas (para evitar duplicaciones accidentales).</li>
+    </ul>
+    <p>
+        <strong>Importante:</strong> Esta información se almacena localmente en tu terminal y <strong>no se transmite ni se almacena en ningún servidor externo propio del Desarrollador</strong>.
+    </p>
 
-        <section>
-            <h2>4. Compras Dentro de la Aplicación (IAP)</h2>
-            <p>Todas las compras de monedas virtuales se realizan mediante el sistema seguro de <strong>Google Play Billing</strong>. Los pagos están sujetos a los Términos de Servicio y la Política de Privacidad de Google Play. El Desarrollador no tiene acceso a tus datos bancarios ni de tarjetas de crédito.</p>
-        </section>
+    <h2>2. Finalidad del Tratamiento de los Datos</h2>
+    <p>La información recopilada por los servicios de terceros y las preferencias locales se utiliza para:</p>
+    <ul>
+        <li>Garantizar el correcto funcionamiento, renderizado y jugabilidad de la Aplicación.</li>
+        <li>Guardar y sincronizar tu avance en los acertijos y el inventario de monedas virtuales.</li>
+        <li>Mostrar anuncios mediante Google AdMob respetando siempre las opciones de consentimiento elegidas por el usuario.</li>
+        <li>Permitir obtener monedas virtuales gratuitas al ver voluntariamente anuncios de vídeo con recompensa.</li>
+        <li>Procesar de forma segura las compras integradas a través de la API oficial de Google Play Billing.</li>
+    </ul>
 
-        <section>
-            <h2>5. Permisos de la Aplicación</h2>
-            <p>La Aplicación solicita los siguientes permisos en Android para su correcto funcionamiento:</p>
-            <ul>
-                <li><code>INTERNET</code>: Necesario para cargar anuncios de AdMob, verificar compras en Google Play y gestionar el consentimiento de anuncios.</li>
-                <li><code>VIBRATE</code>: Utilizado para la respuesta háptica al interactuar con las letras y los botones del juego.</li>
-                <li><code>com.android.vending.BILLING</code>: Requerido por Google Play Billing para procesar compras y transacciones de monedas.</li>
-            </ul>
-        </section>
+    <h2>3. Publicidad, Consentimiento y Control del Usuario (Google UMP SDK)</h2>
+    <div class="highlight-box">
+        La Aplicación integra el SDK de la Plataforma de Mensajería de Usuario de Google (<strong>UMP SDK</strong>), certificado según el Marco de Transparencia y Consentimiento (TCF) de IAB Europa.
+    </div>
+    <p>
+        A los usuarios situados en el Espacio Económico Europeo (EEE), el Reino Unido y Suiza se les muestra un diálogo de consentimiento al iniciar la aplicación donde pueden elegir si aceptan anuncios personalizados, no personalizados o si rechazan determinadas finalidades.
+    </p>
+    <p>
+        <strong>¿Cómo modificar tus preferencias en cualquier momento?</strong><br>
+        Puedes revisar o revocar tu consentimiento publicitario en cualquier momento desde dentro de la Aplicación pulsando sobre el enlace <strong>"Opciones de privacidad"</strong> disponible en la parte inferior de la pantalla de inicio o en la ventana de ayuda ("Cómo jugar").
+    </p>
 
-        <section>
-            <h2>6. Privacidad de los Menores</h2>
-            <p>Nuestra Aplicación está diseñada para una audiencia general. No recopilamos conscientemente información personal de niños menores de edad que infrinja las políticas de Google Play para Familias o COPPA. Los anuncios mostrados a través de AdMob están configurados de acuerdo con las directrices de Google para contenido apto para familias o audiencias generales.</p>
-        </section>
+    <h2>4. Anuncios de Vídeo con Recompensa y Monedas Virtuales</h2>
+    <ul>
+        <li>La visualización de anuncios de vídeo recompensados es siempre <strong>voluntaria</strong> y requiere una acción explícita por parte del usuario.</li>
+        <li>La Aplicación muestra un aviso claro antes de reproducir el vídeo ("Ver vídeo (+10 monedas)").</li>
+        <li>Las monedas virtuales del juego carecen de valor monetario en el mundo real, no son reembolsables en dinero fiduciario y solo pueden emplearse dentro del juego para obtener pistas (revelar letras, eliminar letras distractoras, mostrar claves escritas o saltar acertijos).</li>
+    </ul>
 
-        <section>
-            <h2>7. Cambios en esta Política de Privacidad</h2>
-            <p>Podemos actualizar nuestra Política de Privacidad ocasionalmente. Te recomendamos revisar esta página periódicamente para cualquier cambio. Los cambios entrarán en vigor inmediatamente después de su publicación en este documento.</p>
-        </section>
+    <h2>5. Compras Integradas (Google Play In-App Purchases)</h2>
+    <p>
+        Todas las compras de monedas virtuales se procesan mediante el sistema de facturación oficial de Google Play y están regidas por las <a href="https://play.google.com/intl/es_es/about/play-terms/" target="_blank" rel="noopener">Condiciones de Servicio de Google Play</a>.
+    </p>
 
-        <section>
-            <h2>8. Contacto</h2>
-            <p>Si tienes preguntas, dudas o sugerencias sobre esta Política de Privacidad o las prácticas de privacidad de la Aplicación, puedes ponerte en contacto con el Desarrollador a través de:</p>
-            <div class="contact-box">
-                <ul>
-                    <li><strong>Correo electrónico de contacto:</strong> <a href="mailto:tedrasoft@gmail.com">tedrasoft@gmail.com</a></li>
-                </ul>
-            </div>
-        </section>
-    </main>
+    <h2>6. Permisos Solicitados en Android</h2>
+    <p>La Aplicación solicita únicamente los permisos técnicos estrictamente necesarios para su funcionamiento:</p>
+    <ul>
+        <li><code>android.permission.INTERNET</code>: Requerido para comunicar con los servidores de Google AdMob, Google Play Billing y la verificación del formulario de consentimiento UMP.</li>
+        <li><code>android.permission.VIBRATE</code>: Utilizado para la respuesta táctil (vibración háptica) al colocar o borrar letras.</li>
+        <li><code>com.android.vending.BILLING</code>: Necesario para gestionar compras dentro de la aplicación con Google Play.</li>
+        <li><code>com.google.android.gms.permission.AD_ID</code>: Permiso estándar de Android para que Google Play Services gestione el identificador de publicidad con fines de anuncios y analítica publicitaria conforme a las políticas de Google.</li>
+    </ul>
+    <p>
+        La Aplicación <strong>no</strong> solicita permisos invasivos como acceso a la cámara, micrófono, ubicación GPS, agenda de contactos, llamadas ni lectura de archivos externos personales.
+    </p>
+
+    <h2>7. Protección de Menores y Público Objetivo</h2>
+    <p>
+        El grupo de edad objetivo declarado para esta Aplicación es de <strong>mayores de 13 años</strong> (13-15, 16-17, 18 y más años). La Aplicación no está dirigida a niños menores de 13 años ni recopila intencionadamente datos personales de menores. La publicidad está filtrada conforme a las directrices de contenido adecuado de Google AdMob.
+    </p>
+
+    <h2>8. Conservación y Seguridad de los Datos</h2>
+    <p>
+        Dado que el Desarrollador no mantiene servidores con perfiles o cuentas de usuario, tus datos locales se conservan únicamente en tu dispositivo. Puedes eliminar por completo todos los datos almacenados desinstalando la Aplicación o borrando los datos de la aplicación desde la sección <em>Ajustes &gt; Aplicaciones &gt; Acertijos &gt; Almacenamiento &gt; Borrar datos</em> en tu dispositivo Android.
+    </p>
+
+    <h2>9. Actualizaciones de esta Política</h2>
+    <p>
+        Podemos actualizar esta Política de Privacidad de forma periódica para reflejar mejoras en el juego o requisitos legales y normativos. Cualquier cambio se publicará directamente en esta página con la fecha de actualización correspondiente.
+    </p>
+
+    <h2>10. Contacto</h2>
+    <div class="contact-box">
+        Si tienes cualquier consulta, duda o solicitud relacionada con esta Política de Privacidad o el tratamiento de datos en la Aplicación, puedes ponerte en contacto con nosotros en:
+        <br><br>
+        <strong>Desarrollador:</strong> Cooler<br>
+        <strong>Correo electrónico:</strong> <a href="mailto:tedrasoft@gmail.com">tedrasoft@gmail.com</a>
+    </div>
+</div>
+
 </body>
 </html>
